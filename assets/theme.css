@@ -326,3 +326,49 @@ img,svg,canvas,video{max-width:100%;height:auto}
   *{scroll-behavior:auto!important}
   .marquee div,.pre span::after,.hero-strip-item::after{animation:none!important}
 }
+/* =========================================================
+   DESKTOP NAVBAR CLICK FIX — Energize Express
+   Fixes delayed/unreliable desktop navbar clicks.
+   Mobile navigation remains unchanged.
+   ========================================================= */
+
+@media (min-width: 901px){
+
+  /* Keep the complete navbar above visual overlays */
+  header#top{
+    z-index:1000!important;
+    pointer-events:auto!important;
+  }
+
+  header#top .nav-inner,
+  header#top .brand-lockup,
+  header#top .primary-nav,
+  header#top .primary-nav a,
+  header#top .nav-actions,
+  header#top .nav-actions a{
+    position:relative!important;
+    z-index:1001!important;
+    pointer-events:auto!important;
+  }
+
+  /* Decorative navbar layers must never block a click */
+  header#top::before,
+  header#top::after{
+    pointer-events:none!important;
+  }
+
+  /* Remove any visual transition delay from the actual nav links */
+  header#top .primary-nav a{
+    cursor:pointer!important;
+    transition-property:background,color!important;
+    transition-duration:.15s!important;
+    transition-delay:0s!important;
+  }
+
+  /* Make the click area stable */
+  header#top .primary-nav a,
+  header#top .brand-lockup,
+  header#top .nav-actions .btn{
+    -webkit-tap-highlight-color:transparent;
+  }
+}
