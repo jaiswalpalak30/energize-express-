@@ -327,3 +327,239 @@ body:not(:has(#home)) main,body:not(:has(#home)){background:radial-gradient(800p
 #contact .nl-grain{z-index:1}
 #contact>.wrap{position:relative;z-index:3}
 #contact::after{z-index:1}
+/* =====================================================================
+   MOBILE + TABLET RESPONSIVE OVERRIDES
+   ===================================================================== */
+
+@media (max-width: 900px) {
+  /* Prevent large visual effects from creating horizontal overflow */
+  html, body {
+    overflow-x: hidden;
+  }
+
+  /* Sections */
+  #solutions,
+  #process,
+  #contact,
+  #why-us {
+    overflow: hidden;
+  }
+
+  /* General cards */
+  .solution-card,
+  .why-card,
+  .perk-card,
+  .mv-card,
+  .blog-card,
+  .philosophy-card {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Insurance 3D ring */
+  .card-grid.three.nl-ring3d {
+    height: 660px !important;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+  }
+
+  .nl-ring3d .nl-floor {
+    width: 560px;
+    height: 560px;
+    margin-left: -280px;
+    bottom: 35px;
+  }
+
+  .nl-ring3d .solution-card {
+    left: -145px;
+    top: -255px;
+    width: 290px !important;
+    height: 500px !important;
+  }
+
+  .nl-ring3d .solution-card .card-img {
+    height: 185px;
+    margin: 12px 12px 0 !important;
+  }
+
+  .nl-ring3d .solution-card h4 {
+    margin: 18px 20px 7px !important;
+    font-size: 23px !important;
+    line-height: 1.15;
+  }
+
+  .nl-ring3d .solution-card p {
+    margin: 0 20px 18px !important;
+    font-size: 14px !important;
+    line-height: 1.55;
+  }
+
+  .nl-ring3d .solution-card .nl-tag {
+    margin: auto 20px 18px;
+  }
+
+  .nl-ring-ui {
+    bottom: 0;
+    gap: 12px;
+  }
+
+  .nl-ring-ui button {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* Why-us cards */
+  .why-card:hover {
+    transform: translateY(-5px) scale(1.01);
+  }
+
+  /* About graphic */
+  .about-fig {
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+  }
+
+  /* Contact decorative ring */
+  #contact::after {
+    width: 560px;
+    height: 560px;
+    bottom: -240px;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Reduce expensive effects on small screens */
+  .nl-aurora b {
+    filter: blur(55px);
+  }
+
+  /* Hero */
+  #home h1 {
+    font-size: clamp(34px, 10vw, 52px) !important;
+    line-height: 1.08 !important;
+  }
+
+  .nl-giant {
+    font-size: 31vw;
+    top: 17%;
+  }
+
+  /* Solution / Why cards */
+  .solution-card,
+  .why-card {
+    border-radius: 18px !important;
+  }
+
+  .solution-card .card-img {
+    border-radius: 15px;
+  }
+
+  /* Ring becomes a simple, stable mobile card presentation */
+  .card-grid.three.nl-ring3d {
+    height: auto !important;
+    min-height: 0;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 18px;
+    perspective: none;
+    overflow: visible;
+  }
+
+  .nl-ring3d .nl-floor,
+  .nl-ring3d .nl-stage {
+    display: none !important;
+  }
+
+  .nl-ring3d .solution-card {
+    position: relative !important;
+    left: auto;
+    top: auto;
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0;
+    margin: 0 !important;
+    transform: none !important;
+    display: flex !important;
+  }
+
+  .nl-ring3d .solution-card .card-img {
+    height: 190px;
+    margin: 12px 12px 0 !important;
+  }
+
+  .nl-ring3d .solution-card h4 {
+    margin: 17px 18px 7px !important;
+    font-size: 22px !important;
+  }
+
+  .nl-ring3d .solution-card p {
+    margin: 0 18px 18px !important;
+    font-size: 14px !important;
+  }
+
+  .nl-ring3d .solution-card .nl-tag {
+    margin: 0 18px 18px;
+  }
+
+  .nl-ring-ui {
+    position: static;
+    margin-top: 12px;
+  }
+
+  /* Timeline: stack steps vertically */
+  .timeline {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .timeline::before {
+    display: none;
+  }
+
+  .tl-step {
+    margin: 0 0 16px;
+    padding: 25px 18px 20px !important;
+  }
+
+  .tl-step::before {
+    display: none;
+  }
+
+  .tl-step:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Why-us cube is already hidden below 1000px */
+  .nl-cube-wrap {
+    display: none !important;
+  }
+
+  /* Contact decorative ring */
+  #contact::after {
+    width: 430px;
+    height: 430px;
+    bottom: -180px;
+  }
+
+  /* Remove hover-only transforms on touch devices */
+  .solution-card:hover,
+  .why-card:hover,
+  .mv-card:hover,
+  .perk-card:hover {
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nl-ring3d *,
+  .nl-cube,
+  .nl-cube-orbit,
+  .nl-aurora b,
+  .nl-giant {
+    animation: none !important;
+    transition: none !important;
+  }
+}
