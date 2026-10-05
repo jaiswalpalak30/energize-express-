@@ -1048,3 +1048,93 @@ body:not(:has(#home)) main,body:not(:has(#home)){background:radial-gradient(800p
     border-radius: 18px !important;
   }
 }
+/* ================================================================
+   MOBILE 3D INSURANCE CARD RESTORE
+   The previous mobile responsive patch hid the orbit stage/ring.
+   This override keeps the rotating card visible on mobile.
+   ================================================================ */
+
+@media (max-width: 600px) {
+
+  /* Keep the 3D insurance/card section visible */
+  .card-grid.three.nl-ring3d {
+    display: block !important;
+    position: relative !important;
+    height: 690px !important;
+    min-height: 690px !important;
+    margin-top: 20px !important;
+    overflow: hidden !important;
+    perspective: 1100px !important;
+    perspective-origin: 50% 42% !important;
+  }
+
+  .nl-ring3d .nl-floor {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    bottom: -90px !important;
+    width: 620px !important;
+    height: 620px !important;
+    margin-left: -310px !important;
+    transform: rotateX(72deg) !important;
+    pointer-events: none !important;
+    opacity: .72 !important;
+  }
+
+  .nl-ring3d .nl-stage {
+    display: block !important;
+    position: absolute !important;
+    left: 50% !important;
+    top: 46% !important;
+    width: 0 !important;
+    height: 0 !important;
+    transform-style: preserve-3d !important;
+  }
+
+  /* Responsive card size */
+  .nl-ring3d .solution-card {
+    display: flex !important;
+    position: absolute !important;
+    left: -145px !important;
+    top: -220px !important;
+    width: 290px !important;
+    height: 440px !important;
+    min-height: 440px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform-style: flat !important;
+  }
+
+  .nl-ring3d .solution-card .card-img {
+    height: 175px !important;
+    margin: 10px 10px 0 !important;
+    border-radius: 17px !important;
+  }
+
+  .nl-ring3d .solution-card h4 {
+    margin: 17px 20px 7px !important;
+    font-size: 24px !important;
+    line-height: 1.15 !important;
+  }
+
+  .nl-ring3d .solution-card p {
+    margin: 0 20px !important;
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+  }
+
+  .nl-ring3d .solution-card .icon {
+    top: 20px !important;
+    left: 20px !important;
+  }
+
+  /* Keep navigation arrows visible */
+  .nl-ring3d .nl-controls,
+  .nl-ring3d .ring-controls,
+  .nl-ring3d .orbit-controls {
+    position: relative !important;
+    z-index: 20 !important;
+  }
+}
