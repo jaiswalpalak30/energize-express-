@@ -223,3 +223,488 @@ main > .intro{color:#f5f3ed}
     transition: none !important;
   }
 }
+/* ================================================================
+   ENERGIZE EXPRESS — MOBILE CONTRAST & VISIBILITY FIX
+   Append this file LAST in theme.css / sections.css / subpages.css.
+   Desktop styling is not changed.
+   ================================================================= */
+
+@media (max-width: 900px) {
+
+  /* ---------- GLOBAL MOBILE BASE ---------- */
+  html, body {
+    color-scheme: dark;
+  }
+
+  body {
+    background: #070a10 !important;
+    color: #f5f3ed !important;
+  }
+
+  main {
+    background: #070a10 !important;
+  }
+
+  p, li, span, small, label {
+    text-shadow: none;
+  }
+
+  a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* ---------- MOBILE NAVBAR ---------- */
+  header#top {
+    background: rgba(5, 8, 14, .96) !important;
+    border-color: rgba(255,255,255,.18) !important;
+    box-shadow: 0 12px 35px rgba(0,0,0,.45) !important;
+    backdrop-filter: blur(18px) !important;
+    -webkit-backdrop-filter: blur(18px) !important;
+  }
+
+  nav.primary-nav a,
+  .mobile-nav a {
+    color: #f7f5ef !important;
+  }
+
+  nav.primary-nav a:hover,
+  nav.primary-nav a.active,
+  .mobile-nav a:hover {
+    color: #ffffff !important;
+    background: rgba(255,255,255,.10) !important;
+  }
+
+  .mobile-nav {
+    background: #080c14 !important;
+    border-color: rgba(255,255,255,.14) !important;
+    box-shadow: 0 20px 50px rgba(0,0,0,.55) !important;
+  }
+
+  .mobile-nav a {
+    border-color: rgba(255,255,255,.08) !important;
+  }
+
+  .hamburger span {
+    background: #ffffff !important;
+  }
+
+  /* ---------- HERO ---------- */
+  #home {
+    background: #05070d !important;
+    color: #ffffff !important;
+  }
+
+  #home::before {
+    background:
+      radial-gradient(90% 60% at 78% 30%, rgba(104,119,255,.20), transparent 68%),
+      linear-gradient(180deg, rgba(5,7,13,.82), rgba(5,7,13,.96)) !important;
+  }
+
+  #home h1,
+  #home h1 *,
+  .hero-sub,
+  .hero-credibility,
+  .hero-credibility *,
+  .hero-strip-item,
+  .hero-strip-item * {
+    color: #f7f5ef !important;
+  }
+
+  #home h1 .w i {
+    background: linear-gradient(110deg,#ffffff,#d9d5ca 55%,#9ca8ff) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  .hero-sub {
+    color: rgba(255,255,255,.82) !important;
+  }
+
+  .hero-credibility {
+    background: rgba(255,255,255,.08) !important;
+    border-color: rgba(255,255,255,.20) !important;
+  }
+
+  .hero-strip {
+    background: rgba(5,8,14,.92) !important;
+    border-color: rgba(255,255,255,.12) !important;
+  }
+
+  .hero-strip-item {
+    border-color: rgba(255,255,255,.10) !important;
+  }
+
+  .hero-strip-item .k {
+    background: none !important;
+    color: #f0c97a !important;
+    -webkit-text-fill-color: #f0c97a !important;
+  }
+
+  /* ---------- BUTTONS / WHATSAPP / CTA LINKS ---------- */
+  .btn,
+  .btn-gold,
+  .btn-ghost-dark {
+    text-shadow: none !important;
+  }
+
+  .btn-gold {
+    background: linear-gradient(135deg,#f6d58f,#d9a54a) !important;
+    color: #07182a !important;
+    border-color: transparent !important;
+  }
+
+  .btn-ghost-dark {
+    background: rgba(255,255,255,.08) !important;
+    color: #ffffff !important;
+    border-color: rgba(255,255,255,.30) !important;
+  }
+
+  /* WhatsApp links/buttons: strong green/white contrast */
+  a[href*="wa.me"],
+  a[href*="whatsapp"],
+  .whatsapp-btn,
+  .whatsapp-link {
+    background: #16a34a !important;
+    color: #ffffff !important;
+    border-color: #22c55e !important;
+    text-shadow: none !important;
+    box-shadow: 0 8px 24px rgba(22,163,74,.25) !important;
+  }
+
+  a[href*="wa.me"] *,
+  a[href*="whatsapp"] *,
+  .whatsapp-btn *,
+  .whatsapp-link * {
+    color: #ffffff !important;
+  }
+
+  /* ---------- DARK SECTIONS ---------- */
+  #solutions,
+  #process,
+  #mission-vision,
+  #careers,
+  #contact,
+  #pull-quote {
+    background: #07111f !important;
+    color: #ffffff !important;
+  }
+
+  #solutions h1, #solutions h2, #solutions h3, #solutions h4,
+  #process h1, #process h2, #process h3, #process h4,
+  #mission-vision h1, #mission-vision h2, #mission-vision h3, #mission-vision h4,
+  #careers h1, #careers h2, #careers h3, #careers h4,
+  #contact h1, #contact h2, #contact h3, #contact h4,
+  #pull-quote h1, #pull-quote h2, #pull-quote h3, #pull-quote h4,
+  #solutions p, #process p, #mission-vision p, #careers p, #contact p {
+    color: #f7f5ef !important;
+  }
+
+  #solutions .section-head p,
+  #process .section-head p,
+  #mission-vision .section-head p,
+  #careers .section-head p,
+  #contact .sub,
+  #contact p {
+    color: rgba(255,255,255,.78) !important;
+  }
+
+  /* Keep gradient headings readable instead of becoming dark */
+  #solutions .section-head h2,
+  #process .section-head h2,
+  #mission-vision h2,
+  #careers h2,
+  #contact h2 {
+    background: linear-gradient(110deg,#ffffff,#f0c97a) !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+  }
+
+  /* ---------- DARK GLASS CARDS ---------- */
+  #solutions .solution-card,
+  #solutions .why-card,
+  #mission-vision .mv-card,
+  #careers .perk-card,
+  #process .tl-step,
+  #contact .contact-detail {
+    background: linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.035)) !important;
+    color: #ffffff !important;
+    border-color: rgba(255,255,255,.16) !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,.30), inset 0 1px rgba(255,255,255,.08) !important;
+  }
+
+  #solutions .solution-card h3,
+  #solutions .solution-card h4,
+  #solutions .why-card h3,
+  #solutions .why-card h4,
+  #mission-vision .mv-card h3,
+  #careers .perk-card h3,
+  #careers .perk-card h4,
+  #process .tl-step h3,
+  #process .tl-step h4,
+  #contact .contact-detail .value {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  #solutions .solution-card p,
+  #solutions .why-card p,
+  #mission-vision .mv-card p,
+  #careers .perk-card p,
+  #process .tl-step p,
+  #contact .contact-detail p {
+    color: rgba(255,255,255,.78) !important;
+  }
+
+  /* ---------- LIGHT SECTIONS: DARK TEXT ON LIGHT BACKGROUND ---------- */
+  #about,
+  #why-us {
+    background: #f7f4ec !important;
+    color: #14202c !important;
+  }
+
+  #about .section-head h2,
+  #why-us .section-head h2,
+  #about h2,
+  #why-us h2 {
+    background: none !important;
+    color: #14202c !important;
+    -webkit-text-fill-color: #14202c !important;
+  }
+
+  #about .section-head p,
+  #why-us .section-head p,
+  #about .about-lede,
+  #why-us .sub {
+    color: #46515e !important;
+  }
+
+  #about .rule-label,
+  #why-us .rule-label {
+    color: #8a5a10 !important;
+  }
+
+  #about .philosophy-card,
+  #why-us .why-card {
+    background: #ffffff !important;
+    color: #14202c !important;
+    border-color: rgba(20,32,44,.14) !important;
+    box-shadow: 0 14px 35px rgba(20,32,44,.10) !important;
+    backdrop-filter: none !important;
+  }
+
+  #about .philosophy-card h3,
+  #about .philosophy-card h4,
+  #about .philosophy-card p,
+  #why-us .why-card h3,
+  #why-us .why-card h4,
+  #why-us .why-card p {
+    color: #14202c !important;
+    -webkit-text-fill-color: #14202c !important;
+  }
+
+  #about .philosophy-card p,
+  #why-us .why-card p {
+    color: #53606d !important;
+  }
+
+  #about .philosophy-card .num {
+    color: #a8782a !important;
+    -webkit-text-stroke: 0 !important;
+  }
+
+  /* ---------- PROCESS TIMELINE ---------- */
+  #process .tl-step {
+    opacity: 1 !important;
+  }
+
+  #process .tl-step .tl-num {
+    color: #f0c97a !important;
+    -webkit-text-fill-color: #f0c97a !important;
+  }
+
+  #process .tl-step::before {
+    background: #f0c97a !important;
+    border-color: #07111f !important;
+  }
+
+  /* ---------- CONTACT FORM / INPUTS ---------- */
+  #contact input,
+  #contact textarea,
+  #contact select,
+  input,
+  textarea,
+  select {
+    background: #ffffff !important;
+    color: #17212b !important;
+    border-color: rgba(20,32,44,.25) !important;
+  }
+
+  #contact input::placeholder,
+  #contact textarea::placeholder,
+  input::placeholder,
+  textarea::placeholder {
+    color: #66717d !important;
+    opacity: 1 !important;
+  }
+
+  /* ---------- BLOG PAGE ---------- */
+  .blog-hero,
+  .blog-list {
+    background: #080c14 !important;
+    color: #f5f3ed !important;
+  }
+
+  .blog-hero h1,
+  .blog-hero h2,
+  .blog-hero h3 {
+    color: #f7f5ef !important;
+    -webkit-text-fill-color: #f7f5ef !important;
+  }
+
+  .blog-hero p,
+  .blog-list p {
+    color: rgba(255,255,255,.78) !important;
+  }
+
+  .blog-card {
+    background: linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035)) !important;
+    border-color: rgba(255,255,255,.15) !important;
+    color: #ffffff !important;
+    box-shadow: 0 18px 45px rgba(0,0,0,.28) !important;
+  }
+
+  .blog-card h2,
+  .blog-card h3 {
+    color: #ffffff !important;
+    -webkit-text-fill-color: #ffffff !important;
+  }
+
+  .blog-card p {
+    color: rgba(255,255,255,.76) !important;
+  }
+
+  .blog-card-top,
+  .read-more {
+    color: #f0c97a !important;
+  }
+
+  /* ---------- LEGAL PAGES ---------- */
+  body:has(.legal-section),
+  body:has(.legal-section) main {
+    background: #080c14 !important;
+    color: #f5f3ed !important;
+  }
+
+  body:has(.legal-section) main > h1,
+  body:has(.legal-section) main > .intro,
+  body:has(.legal-section) .legal-section h2 {
+    color: #f7f5ef !important;
+    -webkit-text-fill-color: #f7f5ef !important;
+  }
+
+  body:has(.legal-section) main > .updated,
+  body:has(.legal-section) .legal-section p,
+  body:has(.legal-section) .legal-section li {
+    color: rgba(255,255,255,.80) !important;
+  }
+
+  body:has(.legal-section) .legal-section {
+    border-top-color: rgba(255,255,255,.14) !important;
+  }
+
+  body:has(.legal-section) .legal-section a {
+    color: #d9ff63 !important;
+  }
+
+  body:has(.legal-section) .contact-box {
+    background: rgba(255,255,255,.07) !important;
+    border-left-color: #d9ff63 !important;
+  }
+
+  body:has(.legal-section) .contact-box p,
+  body:has(.legal-section) .contact-box strong {
+    color: #ffffff !important;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: #05070d !important;
+    color: rgba(255,255,255,.76) !important;
+  }
+
+  footer .footer-brand p,
+  footer .footer-col a,
+  footer .footer-col span,
+  footer .footer-bottom span {
+    color: rgba(255,255,255,.76) !important;
+  }
+
+  footer .footer-col h5 {
+    color: #ffffff !important;
+  }
+
+  footer .footer-col a:hover {
+    color: #f0c97a !important;
+  }
+
+  /* ---------- REMOVE LOW-CONTRAST / FADED MOBILE STATES ---------- */
+  .reveal,
+  .tl-step {
+    filter: none !important;
+  }
+
+  .reveal.in,
+  .reveal {
+    opacity: 1 !important;
+  }
+
+  /* Don't let decorative overlays reduce text visibility */
+  #home::after,
+  #about::before,
+  #solutions::before,
+  #why-us::before,
+  #process::before,
+  #contact::before {
+    opacity: .20 !important;
+  }
+
+  /* Keep all decorative canvases behind content */
+  #fx,
+  #fx-v2,
+  .nl-canvas,
+  .nl-vignette,
+  .nl-grain,
+  .nl-aurora {
+    pointer-events: none !important;
+  }
+}
+
+/* Small-phone fine tuning */
+@media (max-width: 480px) {
+  .hero-sub,
+  .section-head p,
+  .about-lede,
+  .legal-section p,
+  .legal-section li,
+  .blog-card p,
+  footer p {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+
+  .btn {
+    min-height: 48px;
+  }
+
+  .blog-card,
+  .solution-card,
+  .why-card,
+  .philosophy-card,
+  .mv-card,
+  .perk-card,
+  .contact-detail {
+    border-radius: 18px !important;
+  }
+}
