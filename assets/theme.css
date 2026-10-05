@@ -372,3 +372,33 @@ img,svg,canvas,video{max-width:100%;height:auto}
     -webkit-tap-highlight-color:transparent;
   }
 }
+/* =========================================================
+   CUSTOM CURSOR VISIBILITY FIX
+   Keeps the custom cursor above the navbar and all page layers.
+   ========================================================= */
+
+.cur-dot,
+.cur-ring {
+  z-index: 20000 !important;
+  pointer-events: none !important;
+}
+
+html.cur .cur-dot,
+html.cur .cur-ring {
+  z-index: 20000 !important;
+  pointer-events: none !important;
+}
+
+/* Keep navbar clickable while allowing the custom cursor to show above it */
+@media (min-width: 901px) {
+  header#top {
+    position: relative;
+    z-index: 1000 !important;
+  }
+
+  header#top .primary-nav a,
+  header#top .brand-lockup,
+  header#top .nav-actions a {
+    cursor: none !important;
+  }
+}
