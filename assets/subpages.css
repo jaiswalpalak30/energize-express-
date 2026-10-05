@@ -1,0 +1,45 @@
+/* =========================================================
+   Energize Express - blog + legal pages
+   1) Footer identical to the home page footer
+   2) Colour-contrast fixes for the dark theme (theme.css)
+   Loaded AFTER assets/theme.css on blog.html and the 4 legal pages.
+   ========================================================= */
+
+/* ---------- 1) FOOTER (same as home page) ---------- */
+footer{position:relative;overflow:hidden;color:rgba(255,255,255,.6)}
+footer::before{content:"ENERGIZE";position:absolute;left:50%;bottom:-.3em;translate:-50% 0;font:700 clamp(100px,19vw,300px)/1 var(--serif);letter-spacing:-.04em;color:transparent;-webkit-text-stroke:1.5px rgba(240,201,122,.1);pointer-events:none;white-space:nowrap}
+footer .wrap{position:relative;z-index:1}
+footer ul{list-style:none;padding:0;margin:0}
+footer li{margin:0;font-size:inherit;color:inherit}
+footer .footer-brand p{color:rgba(255,255,255,.6);margin:0}
+footer .footer-col a,footer .footer-col span{color:rgba(255,255,255,.6)}
+footer .footer-col h5{color:#fff}
+footer .footer-col a:hover{color:var(--gold-light)}
+footer .footer-bottom span{color:rgba(255,255,255,.6)}
+
+/* ---------- 2a) BLOG PAGE ---------- */
+.blog-hero{background:radial-gradient(700px 360px at 85% 0%,rgba(104,119,255,.14),transparent 65%),#080a11;border-bottom:1px solid rgba(255,255,255,.10)}
+.blog-hero h1{color:#f7f5ef}
+.blog-hero p{color:rgba(245,243,237,.74)}
+.blog-list{background:#080a11}
+.blog-card h2{color:#f5f3ed!important}
+.blog-card:hover h2{color:var(--v2-lime)!important}
+.blog-card-top{color:#f0c97a}
+.blog-card-top span:last-child{color:rgba(245,243,237,.72)}
+.blog-card p{color:rgba(245,243,237,.72)!important}
+.read-more{color:#f0c97a}
+.read-more:hover{color:var(--v2-lime)}
+
+/* ---------- 2b) LEGAL PAGES ---------- */
+main > .eyebrow{color:var(--v2-lime)}
+main > h1{color:#f7f5ef}
+main > .updated{color:rgba(245,243,237,.68)}
+main > .intro{color:#f5f3ed}
+.legal-section{border-top-color:rgba(255,255,255,.12)}
+.legal-section h2{color:#f7f5ef}
+.legal-section p,.legal-section li{color:rgba(245,243,237,.80)}
+.legal-section strong,.contact-box strong{color:#fff}
+.legal-section a{color:var(--v2-lime);text-decoration:underline;text-underline-offset:3px}
+.legal-section a:hover{color:#fff}
+.contact-box{background:rgba(255,255,255,.05);border-left-color:var(--v2-lime)}
+.contact-box p{color:rgba(245,243,237,.86)}
